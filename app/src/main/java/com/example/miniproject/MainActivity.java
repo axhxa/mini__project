@@ -16,6 +16,7 @@ import android.os.Message;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 
 import java.io.IOException;
@@ -89,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
+                    Toast.makeText(MainActivity.this,"Can't connect to the website",Toast.LENGTH_LONG).show();
                 }
                 handler.sendEmptyMessage(0);
             }
